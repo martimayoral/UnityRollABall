@@ -41,11 +41,13 @@ public class PlayerController : MonoBehaviour
     {
         if (count >= maxBalls[lvl - 1])
         {
+            lvlWalls[lvl - 1].SetActive(false);
             if (lvl == 4)
+            {
                 winTextObject.SetActive(true);
+            }
             else
             {
-                lvlWalls[lvl - 1].SetActive(false);
                 count = 0;
                 lvl++;
             }
