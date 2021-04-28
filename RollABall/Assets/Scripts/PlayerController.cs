@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] lvlWalls;
 
     private int lvl;
-    private int[] maxBalls = { 10, 15, 20, 25};
+    private int[] maxBalls = { 10, 15, 20, 25 };
     private Rigidbody rb;
     private int count;
     private float mX;
@@ -41,13 +41,13 @@ public class PlayerController : MonoBehaviour
     {
         if (count >= maxBalls[lvl - 1])
         {
-            lvlWalls[lvl - 1].SetActive(false);
             if (lvl == 4)
             {
                 winTextObject.SetActive(true);
             }
             else
             {
+                lvlWalls[lvl - 1].SetActive(false);
                 count = 0;
                 lvl++;
             }
